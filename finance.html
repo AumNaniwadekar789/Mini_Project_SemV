@@ -1,0 +1,416 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        Dashboard - Overview
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #032B44; /* Dark navy blue background */
+        }
+        .text-gray-800 {
+            color: #FFFFFF; /* White font color */
+        }
+        .bg-gray-50 {
+            background-color: #1A1D23; /* Dark gray background */
+        }
+        .text-blue-500 {
+            color: #87CEEB; /* Light blue font color */
+        }
+        .bg-blue-500 {
+            background-color: #032B44; /* Dark navy blue background */
+        }
+        .text-gray-500 {
+            color: #AAAAAA; /* Light gray font color */
+        }
+        .bg-gray-200 {
+            background-color: #333A44; /* Dark gray background */
+        }
+        .text-green-500 {
+            color: #34C759; /* Green font color */
+        }
+        .text-red-500 {
+            color: #FF3737; /* Red font color */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<div class="container mx-auto p-4">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-6">
+        <div class="flex items-center space-x-2">
+           
+            <a href="landingpage.html">
+                <button class="px-6 py-3 bg-white text-blue-900 font-bold rounded-lg gradient-bg">
+                    PENNYWISE
+                </button>
+            </a>
+        </div>
+        <div class="flex space-x-4">
+            <a class="text-blue-500 font-semibold" href="finance.html">
+                Overview
+            </a>
+            <a class="text-gray-500" href="transactions.html">
+                Transaction
+            </a>
+            <a class="text-gray-500" href="invoice.html">
+                Invoice
+            </a>
+            <a class="text-gray-500" href="activity.html">
+                Activity
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-sun text-gray-500"></i>
+            <i class="fas fa-bell text-gray-500"></i>
+            <a href="profilep.html">
+                <img alt="User Avatar" class="w-10 h-10 rounded-full cursor-pointer" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-t8E8mFU8kCpykGS5Q2Eiyg72.png?st=2024-09-21T04%3A44%3A09Z&amp;se=2024-09-21T06%3A44%3A09Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-20T23%3A07%3A52Z&amp;ske=2024-09-21T23%3A07%3A52Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=VG7TKWjxPlmA8ugLrMFxxemqG%2BFCrfndgV48aMXVkUU%3D" width="40"/>
+            </a>
+            
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- My Card -->
+        <div class="lg:col-span-1">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-4">
+                    My Card
+                </h2>
+                <div class="bg-blue-500 p-4 rounded-lg text-white mb-4">
+                    <div class="flex justify-between items-center">
+                        <span>
+                            Sakuku
+                        </span>
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="mt-6">
+                        <span class="block text-sm">
+                            OMI GUSTY
+                        </span>
+                        <span class="block text-lg font-semibold">
+                            06/24
+                        </span>
+                    </div>
+                    <div class="mt-6">
+                        <span class="block text-lg font-semibold">
+                            1234 1234 1234 1234
+                        </span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="block text-sm text-gray-500">
+                            Your Balance
+                        </span>
+                        <span class="block text-lg font-semibold">
+                            $128,320
+                        </span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-green-500">
+                            23.12%
+                        </span>
+                        <span class="text-red-500">
+                            23.12%
+                        </span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <span class="block text-sm text-gray-500">
+                            Currency
+                        </span>
+                        <span class="block text-lg font-semibold">
+                            USD/ US Dollar
+                        </span>
+                    </div>
+                    <div>
+                        <span class="block text-sm text-gray-500">
+                            Status
+                        </span>
+                        <span class="block text-lg font-semibold">
+                            Active
+                        </span>
+                    </div>
+                </div>
+                <button class="w-full py-2 bg-blue-500 text-white rounded-lg">
+                    + Add card
+                </button>
+            </div>
+        </div>
+        <!-- Money Flow and Savings -->
+        <div class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold">
+                        Money Flow
+                    </h2>
+                    <div class="flex space-x-2">
+                        <button class="py-1 px-3 bg-gray-100 rounded-lg">
+                            Money Flow
+                        </button>
+                        <button class="py-1 px-3 bg-gray-100 rounded-lg">
+                            6 Month
+                        </button>
+                    </div>
+                </div>
+                <div class="h-40">
+                    <canvas id="moneyFlowChart"></canvas>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold">
+                        My Savings
+                    </h2>
+                    <a class="text-blue-500" href="#">
+                        View all
+                    </a>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span>
+                            Gaming PC
+                        </span>
+                        <span>
+                            $309
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>
+                            New house
+                        </span>
+                        <span>
+                            $950
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>
+                            Summer trip
+                        </span>
+                        <span>
+                            $550
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>
+                            Wedding
+                        </span>
+                        <span>
+                            $620
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 50%"></div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>
+                            Top up game
+                        </span>
+                        <span>
+                            $170
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quick Transfer, All Expenses, and History Transactions -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-lg font-semibold mb-4">
+                Quick Transfer
+            </h2>
+            <div class="flex space-x-2 mb-4">
+                <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+            </div>
+            <input class="w-full p-2 border rounded-lg mb-4" placeholder="Card Number" type="text" value="1234 2345 7379 90"/>
+            <div class="flex space-x-2">
+                <button class="w-full py-2 bg-blue-500 text-white rounded-lg">
+                    Send money
+                </button>
+                <button class="w-full py-2 bg-gray-200 text-gray-800 rounded-lg">
+                    Save as Draft
+                </button>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">
+                    All Expenses
+                </h2>
+                <button class="py-1 px-3 bg-gray-100 rounded-lg">
+                    6 Month
+                </button>
+            </div>
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <span class="block text-sm text-gray-500">
+                        Daily
+                    </span>
+                    <span class="block text-lg font-semibold">
+                        $475
+                    </span>
+                </div>
+                <div>
+                    <span class="block text-sm text-gray-500">
+                        Weekly
+                    </span>
+                    <span class="block text-lg font-semibold">
+                        $3,327
+                    </span>
+                </div>
+                <div>
+                    <span class="block text-sm text-gray-500">
+                        Monthly
+                    </span>
+                    <span class="block text-lg font-semibold">
+                        $12,131
+                    </span>
+                </div>
+            </div>
+            <div class="h-40">
+                <canvas id="expensesChart"></canvas>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-semibold">
+                    History Transactions
+                </h2>
+                <a class="text-blue-500" href="#">
+                    View all
+                </a>
+            </div>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-download text-blue-500"></i>
+                        <div>
+                            <span class="block text-sm font-semibold">
+                                Order Revenue
+                            </span>
+                            <span class="block text-sm text-gray-500">
+                                Apr 27, 22
+                            </span>
+                        </div>
+                    </div>
+                    <span class="text-green-500">
+                        + $874
+                    </span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-upload text-red-500"></i>
+                        <div>
+                            <span class="block text-sm font-semibold">
+                                Withdrawal Initiated
+                            </span>
+                            <span class="block text-sm text-gray-500">
+                                Apr 25, 22
+                            </span>
+                        </div>
+                    </div>
+                    <span class="text-red-500">
+                        - $2490
+                    </span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-download text-blue-500"></i>
+                        <div>
+                            <span class="block text-sm font-semibold">
+                                Order Revenue
+                            </span>
+                            <span class="block text-sm text-gray-500">
+                                Mar 1, 22
+                            </span>
+                        </div>
+                    </div>
+                    <span class="text-green-500">
+                        + $126
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const moneyFlowCtx = document.getElementById('moneyFlowChart').getContext('2d');
+    const moneyFlowChart = new Chart(moneyFlowCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Money Flow',
+                data: [0, 52000, 30000, 70000, 50000, 90000],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100000
+                }
+            }
+        }
+    });
+
+    const expensesCtx = document.getElementById('expensesChart').getContext('2d');
+    const expensesChart = new Chart(expensesCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Shopping', 'Workspace', 'Platform', 'Entertainments'],
+            datasets: [{
+                label: 'Expenses',
+                data: [30, 20, 25, 25],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
+</body>
+</html>
